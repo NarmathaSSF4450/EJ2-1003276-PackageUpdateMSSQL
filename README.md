@@ -15,6 +15,7 @@
 - [⚙️ Configuration & Environment](#️-configuration--environment)
 - [🧪 Testing & CI](#-testing--ci)
 - [🤝 Contributing](#-contributing)
+- [📜 License & Support](#-license--support)
 
 ---
 
@@ -54,6 +55,36 @@ Run the classic ASP.NET Web API (Visual Studio recommended)
 
 ```powershell
 # Open the solution in Visual Studio and run (IIS Express or project)
+```
+
+Run a front-end sample (choose one):
+
+TypeScript
+```bash
+cd Typescript/pivot-table
+npm install
+npm start
+```
+
+Angular
+```bash
+cd Angular/pivot-table
+npm install
+npm start
+```
+
+React
+```bash
+cd React/pivot-table
+npm install
+npm start
+```
+
+Vue
+```bash
+cd VUE/pivot-table
+npm install
+npm run dev
 ```
 
 First success: Use Swagger (if included) or browse to `https://localhost:<port>/api/pivot` (example) and confirm JSON rows are returned.
@@ -114,7 +145,7 @@ Client: bind Syncfusion PivotView (vanilla JS example)
 fetch('/api/pivotdata')
 	.then(res => res.json())
 	.then(data => {
-		const pivot = new PivotView({
+		var pivot = new ej.pivotview.PivotView({
 			dataSourceSettings: { dataSource: data, rows:[{name:'Country'}], columns:[{name:'Product'}], values:[{name:'Amount'}] },
 			height: 400
 		});
@@ -163,3 +194,29 @@ Contributions welcome — please:
 1. Fork and create a branch: `feature/<short-desc>`
 2. Run the sample(s) locally and update docs
 3. Open a PR and reference related issues
+
+## 📜 License & Support
+
+This is a commercial product subject to the Syncfusion End User License Agreement (EULA).
+
+Free Community License is available for qualifying users/organizations:
+
+* Annual gross revenue < $1 million USD
+* 5 or fewer total developers
+* 10 or fewer total employees
+
+The community license allows free use in both internal and commercial applications under these conditions.
+No registration or approval is required — just comply with the terms.
+
+Paid Licenses are required for:
+
+* Larger organizations
+* Teams exceeding the community license limits
+* Priority support, custom patches, or on-premise deployment options
+
+Purchase options and pricing: https://www.syncfusion.com/sales/products
+30-day free trial (full features, no credit card required): https://www.syncfusion.com/downloads/essential-js2
+Community License details & FAQ: https://www.syncfusion.com/products/communitylicense
+Full EULA: https://www.syncfusion.com/eula/es/
+
+© 2026 Syncfusion, Inc. All Rights Reserved.
